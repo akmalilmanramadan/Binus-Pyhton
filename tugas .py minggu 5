@@ -1,0 +1,45 @@
+def print_info():
+    print("---------------------")
+    print("| Azhar Rizki Zulma |")
+    print("|      Bintaro      |")
+    print("---------------------")
+
+def hitung(angka1=10, angka2=5):
+    hasil = {}
+    hasil['tambah'] = angka1 + angka2
+    hasil['kurang'] = angka1 - angka2
+    hasil['kali'] = angka1 * angka2
+    hasil['bagi'] = angka1 / angka2
+    hasil['modulus'] = angka1 % angka2
+    return hasil
+
+# Program utama
+print_info()
+
+while True:
+    menu = input("Enter Menu (+|-|/|*|%|stop): ")
+    
+    if menu == "stop":
+        print("Program stopped. Thank you for using my program.")
+        break
+    
+    angka1 = int(input("Enter Value 1: "))
+    angka2 = int(input("Enter Value 2: "))
+    
+    if menu == "+":
+        hasil = angka1 + angka2
+        print(f"The result of addition {angka1} + {angka2} is {hasil}")
+    elif menu == "-":
+        hasil = angka1 - angka2
+        print(f"The result of subtraction {angka1} - {angka2} is {hasil}")
+    elif menu == "*":
+        hasil = angka1 * angka2
+        print(f"The result of multiplication {angka1} * {angka2} is {hasil}")
+    elif menu == "/":
+        hasil = angka1 / angka2
+        print(f"The result of division {angka1} / {angka2} is {hasil}")
+    elif menu == "%":
+        hasil = angka1 % angka2
+        print(f"The result of modulus {angka1} % {angka2} is {hasil}")
+    else:
+        print("Menu tidak valid!")
