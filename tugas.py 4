@@ -1,0 +1,103 @@
+max_value = int(input("Input Max Value: "))
+
+for i in range(max_value, 0, -1):
+    for j in range(i):
+        print(i, end="")
+    print()
+
+#no2 
+max_value = int(input("Input Max Value: "))
+
+# Segitiga turun
+for i in range(max_value, 0, -1):
+    for j in range(i):
+        print(i, end="")
+    print()
+
+# Segitiga naik
+for i in range(2, max_value + 1):
+    for j in range(i):
+        print(i, end="")
+    print()
+# no 3
+# Menampilkan angka 1 sampai 10
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+ulang = "Y"
+while ulang == "Y" or ulang == "y":
+    angka = int(input("Enter any number: "))
+
+    if angka % 2 == 0:
+        print(f"The number {angka} is even")
+    else:
+        print(f"The number {angka} is odd")
+
+    ulang = input("Do you want to repeat? Y/N: ")
+
+print("Program Stops")
+print("Thank you for using my program ^^")
+
+#no4
+# Menampilkan angka 1 sampai 18
+i = 1
+while i <= 18:
+    print(i)
+    i += 1
+
+ulang = "Y"
+while ulang == "Y" or ulang == "y":
+    a = int(input("Enter Side A: "))
+    b = int(input("Enter Side B: "))
+    c = int(input("Enter Side C: "))
+
+    if a == b == c:
+        print("It is an Equilateral Triangle")
+    elif a == b or a == c or b == c:
+        print("It is an Isosceles Triangle")
+    else:
+        print("It is a Scalene Triangle")
+
+    ulang = input("Do you want to repeat? Y/N: ")
+
+print("Program Stops")
+print("Thank you for using my program ^^")
+
+# no5
+def konversi_nilai(huruf):
+    if huruf == "A":
+        return 4.00
+    elif huruf == "A-":
+        return 3.75
+    elif huruf == "B+":
+        return 3.50
+    elif huruf == "B":
+        return 3.00
+    elif huruf == "B-":
+        return 2.75
+    elif huruf == "C+":
+        return 2.50
+    elif huruf == "C":
+        return 2.00
+    elif huruf == "C-":
+        return 1.75
+    elif huruf == "D":
+        return 1.50
+    elif huruf == "E":
+        return 1.20
+    else:
+        return 0
+
+total = 0
+jumlah = int(input("Enter number of subjects: "))
+
+i = 1
+while i <= jumlah:
+    grade = input(f"Enter grade for subject {i}: ").upper()
+    total += konversi_nilai(grade)
+    i += 1
+
+rata_rata = total / jumlah
+print("Average Grade:", round(rata_rata, 2))
