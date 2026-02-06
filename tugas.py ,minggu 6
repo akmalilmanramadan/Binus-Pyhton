@@ -1,0 +1,70 @@
+class Student:
+    def __init__(self):
+        # data awal kosong
+        self.name = None
+        self.score = None
+
+    # Getter
+    def getData(self):
+        print("\nName :", self.name)
+        print("Score:", self.score)
+
+    # Setter (tambah data)
+    def setData(self, name, score):
+        self.name = name
+        self.score = score
+        print("Data Successfully Added")
+
+    # Setter (ubah data)
+    def changeData(self, choice, newValue):
+        if choice == "Name":
+            self.name = newValue
+            print("Name Data Successfully Changed")
+        elif choice == "Score":
+            self.score = newValue
+            print("Score Data Successfully Changed")
+        else:
+            print("Invalid Choice")
+
+    # Hapus data
+    def deleteData(self):
+        self.name = None
+        self.score = None
+        print("Data Successfully Deleted")
+
+
+# Membuat object
+student = Student()
+
+while True:
+    print("\n===== OOP Program =====")
+    print("1. Declare Object")
+    print("2. Display Object")
+    print("3. Change Object Value")
+    print("4. Delete Object")
+    print("5. Exit Program")
+
+    choice = input("Enter Your Choice (1/2/3/4/5): ")
+
+    if choice == "1":
+        name = input("Enter Your Name: ")
+        score = input("Enter Your Score: ")
+        student.setData(name, score)
+
+    elif choice == "2":
+        student.getData()
+
+    elif choice == "3":
+        change = input("What would you like to change (Name/Score): ")
+        newValue = input("Enter New Value: ")
+        student.changeData(change, newValue)
+
+    elif choice == "4":
+        student.deleteData()
+
+    elif choice == "5":
+        print("Thank you for using my program.")
+        break
+
+    else:
+        print("Invalid Menu Choice")
